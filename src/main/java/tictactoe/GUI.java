@@ -121,7 +121,7 @@ public class GUI extends JFrame{
 
     protected void numGame(){
         gameContainer.removeAll();
-        gameContainer.add(new NumTTTView(3,3,1));
+        gameContainer.add(new NumTTTView(3,3,2));
         getContentPane().repaint();
         getContentPane().revalidate();
         pack();

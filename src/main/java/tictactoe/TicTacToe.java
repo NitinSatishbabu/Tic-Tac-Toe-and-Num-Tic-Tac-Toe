@@ -22,11 +22,19 @@ public void setGameOver(boolean state){
 /* overridden methods from BoardGame*/
 @Override
 public  boolean takeTurn(int across, int down, String input){
+
+    System.out.println("Across = " + across);
+    System.out.println("down = " + down);
+    System.out.println("input = " + input);
     try{
     // validate location
     grid().validateLocation(across,down);
     // validate input
     grid().validateInput(input, getCurrentPlayer());
+    System.out.println("Across after = " + across);
+    System.out.println("down after= " + down);
+    System.out.println("input after= " + input);
+
     // set token
     setValue(across,down,input);
     if(!isDone()){
@@ -47,7 +55,7 @@ public  boolean takeTurn(int across, int down, String input){
 so it can be left as a stub*/
 @Override
 public  boolean takeTurn(int across, int down, int input){
-    //woork
+    
     return false;
 
 }

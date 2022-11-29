@@ -65,7 +65,7 @@ public class NumTTTView extends JPanel{
                 buttons[y][x].setAcross(x+1); //made the choice to be 1-based
                 buttons[y][x].setDown(y+1);
                 buttons[y][x].addActionListener(e->{
-                                        enterXO(e);
+                                        enterNum(e);
                                         checkGameState();
                                         });
                 panel.add(buttons[y][x]);
@@ -104,23 +104,16 @@ public class NumTTTView extends JPanel{
         updateView();
     }
 
-
-
-    private void enterXO(ActionEvent e){
+    private void enterNum(ActionEvent e){
         //get input from user
-        // String num = JOptionPane.showInputDialog("Please input a value");
-        String sym;
-        if(game.getCurrentPlayer() == 1){
-            sym = "X";
-        }else{
-            sym = "O";
-        }
+        String inp = JOptionPane.showInputDialog("Please input a value"); 
         
         //send input to game and update view
         PositionAwareButton clicked = ((PositionAwareButton)(e.getSource()));
-        if(game.takeTurn(clicked.getAcross(), clicked.getDown(),sym)){
+        if(game.takeTurn(clicked.getAcross(), clicked.getDown(),inp)){
             clicked.setText(game.getCell(clicked.getAcross(),clicked.getDown()));
         }
     }
+
 
 }

@@ -15,7 +15,7 @@ public abstract boolean verticalWin();
 
 public abstract boolean diagonalWin();
 
-public  abstract void validateInput(String input, int currentPlayer) throws Exception;
+public  abstract void validateInput(String input, int player) throws Exception;
 
 public  abstract void validateLocation(int across, int down)throws Exception;
 
