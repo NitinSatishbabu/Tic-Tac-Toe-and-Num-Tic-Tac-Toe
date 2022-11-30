@@ -1,6 +1,9 @@
 package tictactoe;
 import java.util.Scanner;
 
+/**
+ * This class is a text based user interface for a tic-tac-toe game
+ */
 public class TextUI{
     private TicTacToe game = new TicTacToe(3,3);    
     private Scanner input = new Scanner(System.in);

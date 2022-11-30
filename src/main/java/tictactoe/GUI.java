@@ -21,6 +21,12 @@ import java.awt.event.ActionEvent;
 /**
 * 
 */
+/**
+ * It creates a JFrame with a JMenuBar, a JPanel called gameContainer, and a JLabel called
+ * messageLabel. It also has a function called start() that removes all the components from the
+ * gameContainer JPanel, adds a new JPanel to the gameContainer JPanel, and then repaints and
+ * revalidates the JFrame
+ */
 public class GUI extends JFrame{
     private JPanel gameContainer;
     private JLabel messageLabel;

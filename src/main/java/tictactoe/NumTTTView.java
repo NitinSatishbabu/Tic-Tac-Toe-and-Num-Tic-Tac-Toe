@@ -18,6 +18,9 @@ import boardgame.ui.PositionAwareButton;
 /**
 * 
 */
+/**
+ * This class is a view for a TicTacToe game that uses numbers 
+ */
 public class NumTTTView extends JPanel{
 
     private JLabel messageLabel;

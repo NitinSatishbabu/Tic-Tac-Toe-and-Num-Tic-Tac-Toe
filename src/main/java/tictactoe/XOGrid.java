@@ -1,7 +1,9 @@
 package tictactoe;
 
 
-
+/**
+ * This class is a subclass of the GameGrid class and it is used to play a game of Tic-Tac-Toe
+ */
 public class XOGrid extends GameGrid{
 
 private static  String[] symbols ={"X","O"};
