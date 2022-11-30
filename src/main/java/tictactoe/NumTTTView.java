@@ -81,11 +81,12 @@ public class NumTTTView extends JPanel{
         JOptionPane gameOver = new JOptionPane();
         if(game.isDone()){
             selection = gameOver.showConfirmDialog(null,
-             "Well done! Do you want another puzzzle?", "PlayAgain?", JOptionPane.YES_NO_OPTION);
+             game.getGameStateMessage(), "PlayAgain?", JOptionPane.YES_NO_OPTION);
             if(selection == JOptionPane.YES_OPTION){
                 newGame();
             }
         }
+       
     
     }   
 
@@ -106,7 +107,13 @@ public class NumTTTView extends JPanel{
 
     private void enterNum(ActionEvent e){
         //get input from user
-        String inp = JOptionPane.showInputDialog("Please input a value"); 
+        String inp =  "";
+
+        if(game.getCurrentPlayer() == 1){
+            inp =  JOptionPane.showInputDialog("Player 1 input: 1, 3 , 5, 7, 9");        
+        }else{
+            inp =  JOptionPane.showInputDialog("Player 2 input: 0, 2 , 4, 6, 8");
+        }
         
         //send input to game and update view
         PositionAwareButton clicked = ((PositionAwareButton)(e.getSource()));

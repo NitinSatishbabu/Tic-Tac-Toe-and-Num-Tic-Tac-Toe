@@ -61,17 +61,17 @@ return false;
 
 public void validateInput(String input, int player)throws Exception{ 
         int play = player;
-System.out.println("Number = "+input);
-System.out.println("Int = "+Integer.parseInt(input));
-System.out.println("Mod = "+(Integer.parseInt(input) %2));
-System.out.println("Play = "+play);
+// System.out.println("Number = "+input);
+// System.out.println("Int = "+Integer.parseInt(input));
+// System.out.println("Mod = "+(Integer.parseInt(input) %2));
+// System.out.println("Play = "+play);
 
         if(Integer.parseInt(input) %2 == 0 && Integer.parseInt(input) <= 8 && play == 2){
-            System.out.println("Entered even");
+            // System.out.println("Entered even");
             return;
         }
         if((Integer.parseInt(input) %2) != 0 && Integer.parseInt(input) <= 9 && play == 1){
-            System.out.println("Entered odd");
+            // System.out.println("Entered odd");
             return;
         }
     
@@ -91,7 +91,7 @@ int check = 0;
     }
 
     if(super.getValue(across, down) == " " && check == 1){
-        System.out.println("Valid loc");
+        // System.out.println("Valid loc");
         return;
     }
     throw new Exception("Full");

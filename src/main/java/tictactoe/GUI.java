@@ -33,16 +33,16 @@ public class GUI extends JFrame{
         // call the superclass constructor
         super();    
         // set the size, title and default close of the jframe
-        this.setSize(600, 400);
+        this.setSize(1000, 800);
         this.setTitle(title);
 
-        //makeMenu();
+        makeMenu();
         setJMenuBar(menuBar);
         gameContainer = new JPanel();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        messageLabel = new JLabel("Welcome");
+        messageLabel = new JLabel("Welcome, lets play!!!");
 
         // make a new label to store messages
         add(messageLabel,BorderLayout.NORTH);
@@ -57,6 +57,7 @@ public class GUI extends JFrame{
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
         buttonPanel.add(makeTTTButton());
         buttonPanel.add(makeSecondGameButton());
+        // buttonPanel.add(makeSaveButton());
         return buttonPanel;
     }
 
@@ -78,13 +79,23 @@ public class GUI extends JFrame{
         button.addActionListener(e->numGame());
         return button;
     }
+
+    // private JButton makeSaveButton(){
+    //     JButton button = new JButton("Save Game");
+    //     button.addActionListener(e->saveGame());
+    //     return button;
+    // }
+
     public void makeMenu(){
         menuBar = new JMenuBar();
-        JMenu menu = new JMenu("A submenu");
-        JMenuItem item = new JMenuItem("an item (e.g. save)");
+        JMenu menu = new JMenu("Save");
+        JMenu loadMenu = new JMenu("Load");
+        JMenuItem item = new JMenuItem("Save File");
         menu.add(item);
         menuBar.add(menu);
-        item.addActionListener(e->saveSomething());
+        // item.addActionListener(e->saveSomething());
+        menuBar.add(loadMenu);
+        
 
     }
 
@@ -98,9 +109,15 @@ public class GUI extends JFrame{
         pack();
     }
 
-    protected void saveSomething(){
-        JOptionPane.showMessageDialog(null,"This should prompt for save files"); 
-    }
+    // protected void saveGame(){
+    //     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); 
+    //     System.out.println("Enter filename of save with .csv:");
+    //     String str = reader.readLine();
+    //     getStringToSave();
+    //     // JOptionPane.showMessageDialog(null,"Enter filename of save with .csv:"); 
+    //     BufferedWriter saving = new BufferedWriter(new FileWriter("./assets/" + str));
+    //     saving.close();
+    // }
     protected void tictactoe(){
         gameContainer.removeAll();
         gameContainer.add(new XOView(3,3,1));
@@ -129,7 +146,7 @@ public class GUI extends JFrame{
 
     
 public static void main(String[] args){
-    GUI example = new GUI("TTT");
+    GUI example = new GUI("Tic-Tac-Toe");
     example.setVisible(true);
 
 

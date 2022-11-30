@@ -1,6 +1,6 @@
 package tictactoe;
 
-public class TicTacToe extends boardgame.BoardGame{ //implements boardgame.Saveable
+public class TicTacToe extends boardgame.BoardGame { //implements boardgame.Saveable
  private int currentPlayer = 1;
  private String gameStateMessage;
  private boolean done = false;
@@ -23,17 +23,17 @@ public void setGameOver(boolean state){
 @Override
 public  boolean takeTurn(int across, int down, String input){
 
-    System.out.println("Across = " + across);
-    System.out.println("down = " + down);
-    System.out.println("input = " + input);
+    // System.out.println("Across = " + across);
+    // System.out.println("down = " + down);
+    // System.out.println("input = " + input);
     try{
     // validate location
     grid().validateLocation(across,down);
     // validate input
     grid().validateInput(input, getCurrentPlayer());
-    System.out.println("Across after = " + across);
-    System.out.println("down after= " + down);
-    System.out.println("input after= " + input);
+    // System.out.println("Across after = " + across);
+    // System.out.println("down after= " + down);
+    // System.out.println("input after= " + input);
 
     // set token
     setValue(across,down,input);
@@ -167,4 +167,29 @@ public static GameGrid newGrid(int kind, int wide, int tall){
     }
 }
 
+// @Override
+// public String getStringToSave(){
+//     char store = '0';
+//     char curP = getCurrentPlayer();
+//     String finalStr = ""+curP+"\n";
+
+//     for(int x = 1; x <= 3; x++){
+//         for(int y = 1; y <= 3; y++){
+
+//          if(getCell(y,x) == " " && y <= 2){
+//             finalStr += ",";
+//          }
+//          if(getCell(y,x) != " "){
+//             finalStr += getCell(y,x);
+//             if(y <= 2){
+//               inalStr += ",";
+//             }    
+//          }
+//         }
+//         finalStr += "\n";
+//     }
+
+//     return finalStr;
+
+// }
 }
