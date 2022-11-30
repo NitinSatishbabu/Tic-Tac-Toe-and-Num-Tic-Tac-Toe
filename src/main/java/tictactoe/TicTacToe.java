@@ -188,9 +188,9 @@ public String getStringToSave(){
     char sy = '?';
     int curP = getCurrentPlayer();
     if(curP == 1){
-        sy = 'X';
-    } else{
         sy = 'O';
+    } else{
+        sy = 'X';
     }
     String finalStr = ""+sy+"\n";
 
@@ -215,7 +215,7 @@ public String getStringToSave(){
 }
 
 @Override
-public void loadSavedString(String toL){
+public void loadSavedString(String toLoad){
     
 }
 

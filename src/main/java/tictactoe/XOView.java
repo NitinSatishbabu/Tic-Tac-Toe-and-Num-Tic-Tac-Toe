@@ -51,6 +51,7 @@ public class XOView extends JPanel{
         add(makeNewGameButton(),BorderLayout.EAST);
         add(makeButtonGrid(tall,wide), BorderLayout.CENTER);
         add(makeSaveButton(), BorderLayout.SOUTH);
+        // add(makeLoadButton(), BorderLayout.SOUTH);
     }
 
     private JButton makeNewGameButton(){
@@ -161,6 +162,50 @@ public class XOView extends JPanel{
     }
 
 
+    // private JButton makeLoadButton(){
+    //     JButton button = new JButton("Load Game");
+    //     button.addActionListener(e->loadGame());
+    //     return button;
+    // }
+
+
+/**
+ * It opens a file chooser, and if the user selects a file, it writes a string to that file
+ */
+    // protected void loadGame(){
+        
+    //     // System.out.println("Enter filename of save with .csv:");
+    //     // String str = reader.readLine();
+    //     // JFileChooser fc = new JFileChooser("./assets/");    
+    //     // int i = fc.showOpenDialog(this);    
+    //     // //  if (i == JFileChooser.APPROVE_OPTION) {
+    //     //   File f = fc.getSelectedFile();    
+    //     //   String fileP = f.getPath();  
+    //     //   String strToWrote = game.getStringToSave();
+    //     String loadStr = "";
+    //      if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+    //         if (fileChooser.getSelectedFile().canRead()) {
+    //             try {
+    //                 //open file
+    //                 BufferedReader reader = new BufferedReader(new FileReader(fileChooser.getSelectedFile()));
+    //                  while (reader.ready()) {
+    //                   loadStr += (char)reader.read();
+    //                  }
+    //                 // call game.loadSavedString();
+    //                   loadSavedString(loadStr);
+    //                 //do whatever else needs doing to load
+    //                 outputArea.setText(fileChooser.getSelectedFile().getName());
+    //                 outputArea.append("\nThe Full Path\n");
+    //                 outputArea.append(fileChooser.getSelectedFile().getAbsolutePath());
+    //             } catch (Exception ex) {
+    //                 outputArea.append("\n"+ ex.getMessage());
+    //             }
+    //         }
+    //     }
+    // }
+        // JOptionPane.showMessageDialog(null,"Enter filename of save with .csv:"); 
+
+    
 
 /**
  * The function takes in an ActionEvent, which is a button click, and then it gets the button that was

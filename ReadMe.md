@@ -4,7 +4,7 @@ Tic-Tac-Toe game played between 2 human players, turn by turn until win or tie. 
 
 ## Description
 
-The Tic-Tac-Toe can be played in terminal and in GUI, the numerical Tic-Tac-Toe can be played in GUI. Involves 2 human players playing against each other, the game can be restarted (new game), the game can be saved anytime to assests folder. 
+The Tic-Tac-Toe can be played in terminal and in GUI, the numerical Tic-Tac-Toe can be played in GUI. Involves 2 human players playing against each other, the game can be restarted (new game) at anytime, the game can be saved anytime to assests folder(using the save game button right below the board). 
 
 
 ## Getting Started
