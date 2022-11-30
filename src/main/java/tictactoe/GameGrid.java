@@ -2,7 +2,9 @@ package tictactoe;
 
 import java.util.Iterator;
 /* the creation of a parent class is what lets use the same TTT game
-to provide both games */
+to provide both games 
+* @author Nitin Satishbabu
+*/
 
 public abstract class GameGrid extends boardgame.Grid{
 

@@ -1,6 +1,8 @@
 package tictactoe;
 
-/* specialized win check and validation methods for NumTTT */
+/* specialized win check and validation methods for NumTTT 
+ * @author Nitin Satishbabu
+ */
 
 public class NumTTTGrid extends GameGrid{
 

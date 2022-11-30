@@ -27,6 +27,7 @@ import java.io.IOException;
  * @author Nitin Satishbabu
  * This class is the view for the TicTacToe game. It creates the buttons and the grid, and updates the
  * view when the model changes
+ *
  */
 public class XOView extends JPanel{
 

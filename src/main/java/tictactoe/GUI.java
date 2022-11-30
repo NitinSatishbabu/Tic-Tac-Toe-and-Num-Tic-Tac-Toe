@@ -19,9 +19,6 @@ import java.awt.event.ActionEvent;
 // import tictactoe.XOView;
 
 /**
-* 
-*/
-/**
  * @author Nitin Satishbabu
  * It creates a JFrame with a JMenuBar, a JPanel called gameContainer, and a JLabel called
  * messageLabel. It also has a function called start() that removes all the components from the
