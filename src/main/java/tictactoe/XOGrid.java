@@ -10,6 +10,12 @@ public XOGrid(int across, int down){
     super(across,down);
 }
     
+/**
+ * If the first, second, and third values in a row are the same and not equal to a space, then return
+ * true
+ * 
+ * @return A boolean value.
+ */
 public boolean horizontalWin(){
     for(int i = 1; i <= 3; i++){
         if(super.getValue(1,i) == super.getValue(2, i)
@@ -21,6 +27,12 @@ public boolean horizontalWin(){
 return false;
 }
 
+/**
+ * If the first, second, and third values in a column are the same and not equal to a space, then
+ * return true
+ * 
+ * @return A boolean value.
+ */
 public boolean verticalWin(){
     for(int i = 1; i <= 3; i++){
         if(super.getValue(i,1) == super.getValue(i, 2)
@@ -32,6 +44,12 @@ public boolean verticalWin(){
 return false;
 }
 
+/**
+ * If the center square is not empty and the center square is the same as the top right and bottom left
+ * squares, or the center square is the same as the top left and bottom right squares, then return true
+ * 
+ * @return The method is returning a boolean value.
+ */
 public boolean diagonalWin(){
     if(super.getValue(1,1) == super.getValue(2, 2)
     && super.getValue(2,2) == super.getValue(3, 3)
@@ -49,6 +67,12 @@ return false;
     
 }
 
+/**
+ * If the input is not one of the possible symbols, throw an exception
+ * 
+ * @param input The input that the user has entered.
+ * @param currentPlayer The player who is currently playing.
+ */
 @Override
 public void validateInput(String input, int currentPlayer) throws Exception{
     
@@ -61,6 +85,12 @@ public void validateInput(String input, int currentPlayer) throws Exception{
 
 }
 
+/**
+ * This function checks to see if the position is out of bounds or already full
+ * 
+ * @param across the x-coordinate of the position
+ * @param down the row of the board
+ */
 @Override
 public void validateLocation(int across, int down)throws Exception{
     int check = 0;

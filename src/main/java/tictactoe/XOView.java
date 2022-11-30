@@ -41,10 +41,11 @@ public class XOView extends JPanel{
         messageLabel = new JLabel("Welcome to TTT");
         add(makeNewGameButton(),BorderLayout.EAST);
         add(makeButtonGrid(tall,wide), BorderLayout.CENTER);
+        // add(makeSaveButton());
     }
 
     private JButton makeNewGameButton(){
-        JButton button = new JButton("New Puzzle");
+        JButton button = new JButton("New Game");
         button.addActionListener(e->newGame());
         return button;
     }
@@ -109,6 +110,23 @@ public class XOView extends JPanel{
         game.newGame();
         updateView();
     }
+
+    // private JButton makeSaveButton(){
+    //     JButton button = new JButton("Save Game");
+    //     button.addActionListener(e->saveGame());
+    //     return button;
+    // }
+
+    // protected void saveGame(){
+        
+    //     System.out.println("Enter filename of save with .csv:");
+    //     String str = reader.readLine();
+    //     String strToWrote = getStringToSave();
+    //     // JOptionPane.showMessageDialog(null,"Enter filename of save with .csv:"); 
+    //     BufferedWriter saving = new BufferedWriter(new FileWriter("./assets/" + str));
+    //     saving.write(strToWrote);
+    //     saving.close();
+    // }
 
 
 

@@ -6,10 +6,19 @@ public class NumTTTGrid extends GameGrid{
 
 
 
+
+// This is a constructor for the NumTTTGrid class. It is calling the constructor of the superclass,
+// GameGrid.
 public NumTTTGrid(int across, int down){
     super(across,down);
 }
     
+/**
+ * This function checks if there is a horizontal win by checking if the sum of the values in each row
+ * is greater than or equal to 15
+ * 
+ * @return A boolean value.
+ */
 public boolean horizontalWin(){
     
     for(int i = 1; i <= 3; i++){
@@ -24,6 +33,12 @@ public boolean horizontalWin(){
 return false;
 }
 
+/**
+ * This function checks if there is a vertical win by checking if the sum of the values in each column
+ * is greater than or equal to 15
+ * 
+ * @return The method is returning a boolean value.
+ */
 public boolean verticalWin(){
  for(int i = 1; i <= 3; i++){
     if(super.getValue(i,1) != " " && super.getValue(i, 2) != " " && super.getValue(i, 3) != " "){
@@ -38,6 +53,12 @@ return false;
     
 }
 
+/**
+ * If the sum of the values in the diagonal is greater than or equal to 15, and the values are not
+ * empty, then return true
+ * 
+ * @return The method is returning a boolean value.
+ */
 public boolean diagonalWin(){
 
 if(super.getValue(1,1) != " " && super.getValue(2, 2) != " " && super.getValue(3, 3) != " "){
@@ -59,6 +80,12 @@ if(super.getValue(3,1) != " " && super.getValue(2, 2) != " " && super.getValue(1
 return false; 
 }
 
+/**
+ * It takes in a string and an integer and throws an exception if the string is not a valid input
+ * 
+ * @param input The input that the user has entered.
+ * @param player The player who is playing the game.
+ */
 public void validateInput(String input, int player)throws Exception{ 
         int play = player;
 // System.out.println("Number = "+input);
@@ -80,6 +107,12 @@ public void validateInput(String input, int player)throws Exception{
 
 }
 
+/**
+ * This function checks if the location is valid and if it is, it returns true
+ * 
+ * @param across the x-coordinate of the location
+ * @param down the row of the board
+ */
 public void validateLocation(int across, int down)throws Exception{
 
 int check = 0;

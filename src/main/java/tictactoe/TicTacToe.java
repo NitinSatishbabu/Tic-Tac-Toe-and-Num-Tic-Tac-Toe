@@ -170,8 +170,14 @@ public static GameGrid newGrid(int kind, int wide, int tall){
 // @Override
 // public String getStringToSave(){
 //     char store = '0';
-//     char curP = getCurrentPlayer();
-//     String finalStr = ""+curP+"\n";
+//     char sy = '?';
+//     int curP = getCurrentPlayer();
+//     if(curP == 1){
+//         sy = 'X';
+//     } else{
+//         sy = 'O';
+//     }
+//     String finalStr = ""+sy+"\n";
 
 //     for(int x = 1; x <= 3; x++){
 //         for(int y = 1; y <= 3; y++){
@@ -182,7 +188,7 @@ public static GameGrid newGrid(int kind, int wide, int tall){
 //          if(getCell(y,x) != " "){
 //             finalStr += getCell(y,x);
 //             if(y <= 2){
-//               inalStr += ",";
+//               finalStr += ",";
 //             }    
 //          }
 //         }
@@ -192,4 +198,10 @@ public static GameGrid newGrid(int kind, int wide, int tall){
 //     return finalStr;
 
 // }
+
+// @Override
+// public void loadSavedString(String toL){
+    
+// }
+
 }

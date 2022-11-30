@@ -20,6 +20,12 @@ public  abstract void validateInput(String input, int player) throws Exception;
 public  abstract void validateLocation(int across, int down)throws Exception;
 
 
+/**
+ * The function iterates through the board and counts the number of non-empty spaces.  If the number
+ * of non-empty spaces is equal to the number of spaces on the board, then the board is full
+ * 
+ * @return The method isFull() is returning a boolean value.
+ */
 public boolean isFull(){
     /* I should have provided this method in the base class 
     but I didn't think of it.  Fortunately, we can

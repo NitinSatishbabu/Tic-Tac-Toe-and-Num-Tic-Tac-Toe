@@ -29,6 +29,9 @@ public class GUI extends JFrame{
     //private Player player2;
 
 
+/**
+* Sets title, menubar,labels, etc.
+*/
     public GUI(String title){
         // call the superclass constructor
         super();    
@@ -52,6 +55,11 @@ public class GUI extends JFrame{
 
     }
 
+/**
+ * This function creates a panel that contains two buttons, one for the Tic Tac Toe game and one for
+ * the numTTT game
+ * 
+ */
     private JPanel makeButtonPanel(){
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
@@ -61,12 +69,22 @@ public class GUI extends JFrame{
         return buttonPanel;
     }
 
+/**
+ * Make a button that says "Play XO" and when it's clicked, call the function tictactoe()
+ * 
+ * @return A button with the text "Play XO" and an action listener that calls the tictactoe() method.
+ */
     private JButton makeTTTButton(){
         JButton button = new JButton("Play XO");
         button.addActionListener(e->tictactoe());
         return button;
     }
 
+/**
+ * This function creates a JPanel with a JLabel that says "time to play some board games!"
+ * 
+ * @return A JPanel with a JLabel that says "time to play some board games!"
+ */
     private JPanel startupMessage(){
         JPanel temp = new JPanel();
         temp.add(new JLabel("time to play some board games!"));
@@ -74,6 +92,12 @@ public class GUI extends JFrame{
 
     }
 
+/**
+ * "Make a button that says "Play Num TTT" and when clicked, calls the numGame() function."
+ * 
+ * @return A button with the text "Play Num TTT" and an action listener that calls the numGame()
+ * method.
+ */
     private JButton makeSecondGameButton(){
         JButton button = new JButton("Play Num TTT");
         button.addActionListener(e->numGame());
@@ -86,6 +110,10 @@ public class GUI extends JFrame{
     //     return button;
     // }
 
+/**
+ * This function creates a menu bar with two menus, "Save" and "Load". The "Save" menu has one item,
+ * "Save File".
+ */
     public void makeMenu(){
         menuBar = new JMenuBar();
         JMenu menu = new JMenu("Save");
@@ -118,6 +146,10 @@ public class GUI extends JFrame{
     //     BufferedWriter saving = new BufferedWriter(new FileWriter("./assets/" + str));
     //     saving.close();
     // }
+/**
+ * It removes all the components from the gameContainer JPanel, adds a new XOView JPanel to the
+ * gameContainer JPanel, and then repaints and revalidates the JFrame
+ */
     protected void tictactoe(){
         gameContainer.removeAll();
         gameContainer.add(new XOView(3,3,1));
@@ -136,6 +168,10 @@ public class GUI extends JFrame{
      
 //     }
 
+/**
+ * It removes all the components from the gameContainer JPanel, adds a new NumTTTView JPanel to the
+ * gameContainer JPanel, and then repaints and revalidates the JFrame
+ */
     protected void numGame(){
         gameContainer.removeAll();
         gameContainer.add(new NumTTTView(3,3,2));
@@ -145,6 +181,9 @@ public class GUI extends JFrame{
     }
 
     
+/**
+ * The main function creates a new GUI object called example and sets it to visible
+ */
 public static void main(String[] args){
     GUI example = new GUI("Tic-Tac-Toe");
     example.setVisible(true);

@@ -35,6 +35,9 @@ public class TextUI{
         
     }
 
+/**
+ * This function gets the position of the user's move
+ */
     private void getPosition(){
         /*this method needs some validation and error checking*/
         System.out.println("across? (0 to quit)");
@@ -44,6 +47,11 @@ public class TextUI{
         System.out.println("down?");
         downVal = input.nextInt(); //to get rid or hard return;
     }
+/**
+ * If the current player is player 1, return "X", otherwise return "O"
+ * 
+ * @return The token of the current player.
+ */
     private String getToken(){
         if(game.getCurrentPlayer() == 1){
             return "X";
