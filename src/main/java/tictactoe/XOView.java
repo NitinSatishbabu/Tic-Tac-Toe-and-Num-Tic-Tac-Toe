@@ -13,6 +13,11 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import boardgame.ui.PositionAwareButton;
+import javax.swing.JFileChooser;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.File;
+import java.io.IOException;
 // import tictactoe.GUI;
 
 /**
@@ -45,7 +50,7 @@ public class XOView extends JPanel{
         messageLabel = new JLabel("Welcome to TTT");
         add(makeNewGameButton(),BorderLayout.EAST);
         add(makeButtonGrid(tall,wide), BorderLayout.CENTER);
-        // add(makeSaveButton());
+        add(makeSaveButton(), BorderLayout.SOUTH);
     }
 
     private JButton makeNewGameButton(){
@@ -115,25 +120,55 @@ public class XOView extends JPanel{
         updateView();
     }
 
-    // private JButton makeSaveButton(){
-    //     JButton button = new JButton("Save Game");
-    //     button.addActionListener(e->saveGame());
-    //     return button;
-    // }
+/**
+ * MakeSaveButton() returns a JButton that, when clicked, calls saveGame().
+ * 
+ * @return A button with the text "Save Game" and an action listener that calls the saveGame() method.
+ */
+    private JButton makeSaveButton(){
+        JButton button = new JButton("Save Game");
+        button.addActionListener(e->saveGame());
+        return button;
+    }
 
-    // protected void saveGame(){
+
+/**
+ * It opens a file chooser, and if the user selects a file, it writes a string to that file
+ */
+    protected void saveGame(){
         
-    //     System.out.println("Enter filename of save with .csv:");
-    //     String str = reader.readLine();
-    //     String strToWrote = getStringToSave();
-    //     // JOptionPane.showMessageDialog(null,"Enter filename of save with .csv:"); 
-    //     BufferedWriter saving = new BufferedWriter(new FileWriter("./assets/" + str));
-    //     saving.write(strToWrote);
-    //     saving.close();
-    // }
+        // System.out.println("Enter filename of save with .csv:");
+        // String str = reader.readLine();
+        JFileChooser fc = new JFileChooser("./assets/");    
+        int i = fc.showOpenDialog(this);    
+         if (i == JFileChooser.APPROVE_OPTION) {
+          File f = fc.getSelectedFile();    
+          String fileP = f.getPath();  
+          String strToWrote = game.getStringToSave();
+          try{
+             BufferedWriter saving = new BufferedWriter(new FileWriter(fileP));
+             saving.write(strToWrote);
+             saving.close();
+          } catch (IOException eer){
+          return;
+          }
+         }
+
+
+       
+        // JOptionPane.showMessageDialog(null,"Enter filename of save with .csv:"); 
+
+    }
 
 
 
+/**
+ * The function takes in an ActionEvent, which is a button click, and then it gets the button that was
+ * clicked, and then it sends the button's position to the game, and then it updates the button's text
+ * to the value that the game has stored in that position
+ * 
+ * @param e the event that triggered the method
+ */
     private void enterXO(ActionEvent e){
         //get input from user
         // String num = JOptionPane.showInputDialog("Please input a value");

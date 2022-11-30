@@ -4,7 +4,7 @@ package tictactoe;
  * The TicTacToe class is a subclass of BoardGame that implements the abstract methods of BoardGame and
  * adds a few methods of its own
  */
-public class TicTacToe extends boardgame.BoardGame { //implements boardgame.Saveable
+public class TicTacToe extends boardgame.BoardGame implements boardgame.Saveable{ //implements boardgame.Saveable
  private int currentPlayer = 1;
  private String gameStateMessage;
  private boolean done = false;
@@ -145,6 +145,11 @@ public String getGameStateMessage(){
         }
         return(player + " please indicate where you would like to put your token.");
     }
+ /**
+  * This function returns a string that says who won the game or when tie occurs
+  * 
+  * @return The gameOverMessage() method is returning a string that is based on the winner of the game.
+  */
     private String gameOverMessage(){
         // int con = 3;
         /*should compose a nice string about who won and/or tie game*/
@@ -171,41 +176,47 @@ public static GameGrid newGrid(int kind, int wide, int tall){
     }
 }
 
-// @Override
-// public String getStringToSave(){
-//     char store = '0';
-//     char sy = '?';
-//     int curP = getCurrentPlayer();
-//     if(curP == 1){
-//         sy = 'X';
-//     } else{
-//         sy = 'O';
-//     }
-//     String finalStr = ""+sy+"\n";
+/**
+ * It returns a string that contains the current state of the game, including the current player, and
+ * the board
+ * 
+ * @return The current state of the game is being returned.
+ */
+@Override
+public String getStringToSave(){
+    char store = '0';
+    char sy = '?';
+    int curP = getCurrentPlayer();
+    if(curP == 1){
+        sy = 'X';
+    } else{
+        sy = 'O';
+    }
+    String finalStr = ""+sy+"\n";
 
-//     for(int x = 1; x <= 3; x++){
-//         for(int y = 1; y <= 3; y++){
+    for(int x = 1; x <= 3; x++){
+        for(int y = 1; y <= 3; y++){
 
-//          if(getCell(y,x) == " " && y <= 2){
-//             finalStr += ",";
-//          }
-//          if(getCell(y,x) != " "){
-//             finalStr += getCell(y,x);
-//             if(y <= 2){
-//               finalStr += ",";
-//             }    
-//          }
-//         }
-//         finalStr += "\n";
-//     }
+         if(getCell(y,x) == " " && y <= 2){
+            finalStr += ",";
+         }
+         if(getCell(y,x) != " "){
+            finalStr += getCell(y,x);
+            if(y <= 2){
+              finalStr += ",";
+            }    
+         }
+        }
+        finalStr += "\n";
+    }
 
-//     return finalStr;
+    return finalStr;
 
-// }
+}
 
-// @Override
-// public void loadSavedString(String toL){
+@Override
+public void loadSavedString(String toL){
     
-// }
+}
 
 }
