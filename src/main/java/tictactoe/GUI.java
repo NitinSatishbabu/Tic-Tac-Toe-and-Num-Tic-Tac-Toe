@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 * 
 */
 /**
+ * @author Nitin Satishbabu
  * It creates a JFrame with a JMenuBar, a JPanel called gameContainer, and a JLabel called
  * messageLabel. It also has a function called start() that removes all the components from the
  * gameContainer JPanel, adds a new JPanel to the gameContainer JPanel, and then repaints and
@@ -36,6 +37,7 @@ public class GUI extends JFrame{
 
 
 /**
+* @author Nitin Satishbabu
 * Sets title, menubar,labels, etc.
 */
     public GUI(String title){
@@ -62,6 +64,7 @@ public class GUI extends JFrame{
     }
 
 /**
+ * @author Nitin Satishbabu
  * This function creates a panel that contains two buttons, one for the Tic Tac Toe game and one for
  * the numTTT game
  * 
@@ -76,6 +79,7 @@ public class GUI extends JFrame{
     }
 
 /**
+ * @author Nitin Satishbabu
  * Make a button that says "Play XO" and when it's clicked, call the function tictactoe()
  * 
  * @return A button with the text "Play XO" and an action listener that calls the tictactoe() method.
@@ -87,6 +91,7 @@ public class GUI extends JFrame{
     }
 
 /**
+ * @author Nitin Satishbabu
  * This function creates a JPanel with a JLabel that says "time to play some board games!"
  * 
  * @return A JPanel with a JLabel that says "time to play some board games!"
@@ -99,6 +104,7 @@ public class GUI extends JFrame{
     }
 
 /**
+ * @author Nitin Satishbabu
  * "Make a button that says "Play Num TTT" and when clicked, calls the numGame() function."
  * 
  * @return A button with the text "Play Num TTT" and an action listener that calls the numGame()
@@ -117,6 +123,7 @@ public class GUI extends JFrame{
     // }
 
 /**
+ * @author Nitin Satishbabu
  * This function creates a menu bar with two menus, "Save" and "Load". The "Save" menu has one item,
  * "Save File".
  */
@@ -153,6 +160,7 @@ public class GUI extends JFrame{
     //     saving.close();
     // }
 /**
+ * @author Nitin Satishbabu
  * It removes all the components from the gameContainer JPanel, adds a new XOView JPanel to the
  * gameContainer JPanel, and then repaints and revalidates the JFrame
  */
@@ -175,6 +183,7 @@ public class GUI extends JFrame{
 //     }
 
 /**
+ * @author Nitin Satishbabu
  * It removes all the components from the gameContainer JPanel, adds a new NumTTTView JPanel to the
  * gameContainer JPanel, and then repaints and revalidates the JFrame
  */
@@ -188,6 +197,7 @@ public class GUI extends JFrame{
 
     
 /**
+ * @author Nitin Satishbabu
  * The main function creates a new GUI object called example and sets it to visible
  */
 public static void main(String[] args){

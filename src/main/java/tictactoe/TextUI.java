@@ -2,6 +2,7 @@ package tictactoe;
 import java.util.Scanner;
 
 /**
+ * @author Nitin Satishbabu
  * This class is a text based user interface for a tic-tac-toe game
  */
 public class TextUI{
@@ -39,6 +40,7 @@ public class TextUI{
     }
 
 /**
+ * @author Nitin Satishbabu
  * This function gets the position of the user's move
  */
     private void getPosition(){
@@ -51,6 +53,7 @@ public class TextUI{
         downVal = input.nextInt(); //to get rid or hard return;
     }
 /**
+ * @author Nitin Satishbabu
  * If the current player is player 1, return "X", otherwise return "O"
  * 
  * @return The token of the current player.

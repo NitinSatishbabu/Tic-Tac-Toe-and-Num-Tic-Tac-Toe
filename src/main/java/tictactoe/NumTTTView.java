@@ -24,6 +24,7 @@ import java.io.IOException;
 * 
 */
 /**
+ * @author Nitin Satishbabu
  * This class is a view for a TicTacToe game that uses numbers 
  */
 public class NumTTTView extends JPanel{
@@ -115,6 +116,7 @@ public class NumTTTView extends JPanel{
     }
 
 /**
+ * @author Nitin Satishbabu
  * MakeSaveButton() returns a JButton that, when clicked, calls saveGame().
  * 
  * @return A button with the text "Save Game" and an action listener that calls the saveGame() method.
@@ -126,6 +128,7 @@ public class NumTTTView extends JPanel{
     }
 
 /**
+ * @author Nitin Satishbabu
  * It opens a file chooser, and if the user selects a file, it writes the game's state to that file
  */
     protected void saveGame(){
@@ -149,6 +152,7 @@ public class NumTTTView extends JPanel{
     }
 
     /**
+     * @author Nitin Satishbabu
      * The function takes in an ActionEvent, gets the input from the user, sends the input to the game,
      * and updates the view
      * 

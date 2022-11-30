@@ -1,6 +1,7 @@
 package tictactoe;
 
 /**
+ * @author Nitin Satishbabu
  * The TicTacToe class is a subclass of BoardGame that implements the abstract methods of BoardGame and
  * adds a few methods of its own
  */
@@ -146,6 +147,7 @@ public String getGameStateMessage(){
         return(player + " please indicate where you would like to put your token.");
     }
  /**
+  * @author Nitin Satishbabu
   * This function returns a string that says who won the game or when tie occurs
   * 
   * @return The gameOverMessage() method is returning a string that is based on the winner of the game.
@@ -177,6 +179,7 @@ public static GameGrid newGrid(int kind, int wide, int tall){
 }
 
 /**
+ * @author Nitin Satishbabu
  * It returns a string that contains the current state of the game, including the current player, and
  * the board
  * 
@@ -218,5 +221,4 @@ public String getStringToSave(){
 public void loadSavedString(String toLoad){
     
 }
-
 }

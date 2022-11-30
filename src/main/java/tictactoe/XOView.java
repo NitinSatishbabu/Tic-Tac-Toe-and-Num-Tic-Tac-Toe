@@ -24,6 +24,7 @@ import java.io.IOException;
 * 
 */
 /**
+ * @author Nitin Satishbabu
  * This class is the view for the TicTacToe game. It creates the buttons and the grid, and updates the
  * view when the model changes
  */
@@ -122,6 +123,7 @@ public class XOView extends JPanel{
     }
 
 /**
+ * @author Nitin Satishbabu
  * MakeSaveButton() returns a JButton that, when clicked, calls saveGame().
  * 
  * @return A button with the text "Save Game" and an action listener that calls the saveGame() method.
@@ -134,6 +136,7 @@ public class XOView extends JPanel{
 
 
 /**
+ * @author Nitin Satishbabu
  * It opens a file chooser, and if the user selects a file, it writes a string to that file
  */
     protected void saveGame(){
@@ -208,6 +211,7 @@ public class XOView extends JPanel{
     
 
 /**
+ * @author Nitin Satishbabu
  * The function takes in an ActionEvent, which is a button click, and then it gets the button that was
  * clicked, and then it sends the button's position to the game, and then it updates the button's text
  * to the value that the game has stored in that position

@@ -14,6 +14,7 @@ public NumTTTGrid(int across, int down){
 }
     
 /**
+ * @author Nitin Satishbabu
  * This function checks if there is a horizontal win by checking if the sum of the values in each row
  * is greater than or equal to 15
  * 
@@ -34,6 +35,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * This function checks if there is a vertical win by checking if the sum of the values in each column
  * is greater than or equal to 15
  * 
@@ -54,6 +56,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * If the sum of the values in the diagonal is greater than or equal to 15, and the values are not
  * empty, then return true
  * 
@@ -81,6 +84,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * It takes in a string and an integer and throws an exception if the string is not a valid input
  * 
  * @param input The input that the user has entered.
@@ -108,6 +112,7 @@ public void validateInput(String input, int player)throws Exception{
 }
 
 /**
+ * @author Nitin Satishbabu
  * This function checks if the location is valid and if it is, it returns true
  * 
  * @param across the x-coordinate of the location

@@ -2,6 +2,7 @@ package tictactoe;
 
 
 /**
+ * @author Nitin Satishbabu
  * This class is a subclass of the GameGrid class and it is used to play a game of Tic-Tac-Toe
  */
 public class XOGrid extends GameGrid{
@@ -13,6 +14,7 @@ public XOGrid(int across, int down){
 }
     
 /**
+ * @author Nitin Satishbabu
  * If the first, second, and third values in a row are the same and not equal to a space, then return
  * true
  * 
@@ -30,6 +32,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * If the first, second, and third values in a column are the same and not equal to a space, then
  * return true
  * 
@@ -47,6 +50,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * If the center square is not empty and the center square is the same as the top right and bottom left
  * squares, or the center square is the same as the top left and bottom right squares, then return true
  * 
@@ -70,6 +74,7 @@ return false;
 }
 
 /**
+ * @author Nitin Satishbabu
  * If the input is not one of the possible symbols, throw an exception
  * 
  * @param input The input that the user has entered.
@@ -88,6 +93,7 @@ public void validateInput(String input, int currentPlayer) throws Exception{
 }
 
 /**
+ * @author Nitin Satishbabu
  * This function checks to see if the position is out of bounds or already full
  * 
  * @param across the x-coordinate of the position
